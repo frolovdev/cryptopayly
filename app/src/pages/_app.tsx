@@ -16,9 +16,12 @@ import { ToastBar, Toaster, toast } from 'react-hot-toast';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { MetaProvider } from '../lib/MetaProvider';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Default styles that can be overridden by your app
 require('@solana/wallet-adapter-react-ui/styles.css');
+
+const queryClient = new QueryClient();
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -49,6 +52,7 @@ function MyApp({
   );
 
   return (
+    <QueryClientProvider client={queryClient}>
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
@@ -82,6 +86,7 @@ function MyApp({
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
+    </QueryClientProvider>
   );
 }
 
