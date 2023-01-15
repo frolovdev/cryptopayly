@@ -2,13 +2,13 @@
 seeds = false
 skip-lint = false
 [programs.localnet]
-cryptopayly = "2fRi7Li4m9hc71UW6iRJLBTiPWfYxbL9CxAzbeLinHHT"
+cryptopayly = "4UkwwLXf1n6pNgcWDWCUE21NQkvTVZGJsdPcmppL2F8j"
 
 [programs.devnet]
-cryptopayly = "2fRi7Li4m9hc71UW6iRJLBTiPWfYxbL9CxAzbeLinHHT"
+cryptopayly = "4UkwwLXf1n6pNgcWDWCUE21NQkvTVZGJsdPcmppL2F8j"
 
 [programs.mainnet]
-cryptopayly = "2fRi7Li4m9hc71UW6iRJLBTiPWfYxbL9CxAzbeLinHHT"
+cryptopayly = "4UkwwLXf1n6pNgcWDWCUE21NQkvTVZGJsdPcmppL2F8j"
 
 [registry]
 url = "https://api.apr.dev"

@@ -62,6 +62,7 @@ export function useInitializeUserMutation() {
         program.programId,
       );
 
+      console.log('lol')
       return await program.methods
         .createUserProfile()
         .accounts({
